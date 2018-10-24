@@ -338,85 +338,31 @@ Ship captains are really starting to rely on you to plot their routes through yo
 A cell is considered dangerous if there is a rock or a strong current in it. However, a cell with rocks in it would be 100% dangerous, while strong currents are only 50% dangerous. Write a function called howDangerous() that will take a cell in the format 'G7' and return a number value for how dangerous the cell is. (Example: howDangerous('E2') will return 50 where howDangerous('E3') will return 100.)
 */
 
-- compare str value to allRocks and allCurrents
-- use allRocks() and allCurrents()
-- loop through if str == allRocks[i] then return 100
-- loop through if str == allCurrents[i] then return 50
-- else return 0
-
-
-// function rockDanger(str){
-//   const rocksCell = allRocks(); //these will return an array with str 'G3' or 'A5' that will contain all rock cells
-// 	for (let i = 0; i < rocksCell.length; i++){
-//     if (str === rocksCell[i]) {
-//       return 100;
-//   	} else {
-//       return 0;
-//     }
-//   }
-// }
-
-//rockDanger('D1');
-
-// function currentsDanger(str){
-//   const currentsCell = allCurrents();
-//   for (let i = 0; i < currentsCell.length; i++){
-//     if (str === currentsCell[i]) {
-//       return 50;
-//     } else {
-//       return 0;
-//     }
-//   }
-// }
-
-//currentsDanger('E2');
-
-// function howDangerous(str){
-//   const currentsCell = allCurrents();
-//   for (let i = 0; i < currentsCell.length; i++){
-//     if (str === currentsCell[i]) {
-//       return 50;
-//     } else {
-//       return 0;
-//     }
-//   }
-//   const rocksCell = allRocks(); //these will return an array with str 'G3' or 'A5' that will contain all rock cells
-// 	for (let j = 0; j < rocksCell.length; j++){
-//     if (str === rocksCell[i]) {
-//       return 100;
-//   	} else {
-//       return 0;
-//     }
-//   }
-// }
-
-// function howDangerous(str){
-//   let currentsCell = allCurrents();
-//   let rocksCell = allRocks();
-//   let rocksCurrentsCells = currentsCell.concat(rocksCell);
-
-//   for (let i = 0; i < rocksCurrentsCells.length; i++){
-//     if (str == currentsCell[i]) {
-//       return 50;
-//     } else if (str == rocksCell[i]){
-//       return 100;
-//     } else {
-//       return 0;
-//     }
-//   }
-// }
+- access GRID values using GRID[column][row]
+- convert str to row via .slice method // you can probably use lightcell()
+- conditional statement if cell === "^" then return 100
+- if cell === "~" then return 50
 
 
 function howDangerous(str){
-  let a = str.slice(1);
-  let b = convertColumn(str);
-  let cell = GRID[a - 1][b];
+  let row = str.slice(1);
+  let column = convertColumn(str);
+  let cell = GRID[row - 1][column];
   if (cell === "^") {
     return 100;
   } else if (cell === "~") {
     return 50;
   }
 }
+
+// function howDangerous(str){
+//   let cell = lightcell(str);
+//   if (cell === "^") {
+//     return 100;
+//   } else if (cell === "~") {
+//     return 50;
+//   }
+// }
 
 
 /*

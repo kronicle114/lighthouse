@@ -3,7 +3,7 @@
 https://coding-challenge.lighthouselabs.ca
 
 Name: Women in Web Dev FB Group
-Description: The most active online community for female develo
+Description: The most active online community for female developers
 Member Count: 130
 
 Challenge prompts can be seen in `README` and my solutions seen in `solutions.js`
