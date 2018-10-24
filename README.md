@@ -10,7 +10,7 @@ Challenge prompts can be seen in `README` and my solutions seen in `solutions.js
 
 ## Show Grid
 
-``
+```
 A   B   C   D   E   F   G   H   I   J
 +---+---+---+---+---+---+---+---+---+---+
 1  |   |   |   | ^ |   |   |   |   |   |   |
@@ -33,7 +33,7 @@ A   B   C   D   E   F   G   H   I   J
 +---+---+---+---+---+---+---+---+---+---+
 10 |   | ^ |   |   | ~ | ~ |   |   |   |   |
 +---+---+---+---+---+---+---+---+---+---+
-``
+```
 
 ## Show Grid Code
 ```
