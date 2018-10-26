@@ -38,7 +38,7 @@ const GRID = [
 
 /*
 Day 1:
-As a lighthouse operator, your job is to both watch out for dangers in your area, such as rocks and strong currents, but also to be the knowledge expert for your area of the ocean. With this in mind, let's start using our coding skills to get some information about our GRID area. For starters, let's find out how many rows there are in our GRID.
+ As a lighthouse operator, your job is to both watch out for dangers in your area, such as rocks and strong currents, but also to be the knowledge expert for your area of the ocean. With this in mind, let's start using our coding skills to get some information about our GRID area. For starters, let's find out how many rows there are in our GRID.
 Up above you have access to the printed-out grid, and the JS code for the grid. This is your grid, for your lighthouse.
 
 Write a function called countRows() which will tell us the number of rows in our GRID. Remember that other lighthouse operators are going to be using this function, so it has to be able to work on a GRID of any size. It would be easy to write a function that just did return 10; but that wouldn't help operators with bigger or smaller areas!
@@ -50,6 +50,8 @@ function countRows(){
   return GRID.length;
 }
 
+//countRows();
+// print => 10
 
 /*
 Day 2:
@@ -370,6 +372,48 @@ Challenge #19
 It's time for monthly reporting to Lighthouse HQ. Your supervisor calls you and tells you that they need a report of what percentage of your grid is rocks and what percentage has strong currents. This data should be sent as an array of two number values, in that specific order. Write a function percentageReport() that returns the right percentages. (Example: calling percentageReport() should return the following array: [9.00, 7.00], as 9% of your GRID is rocks, and 7% is currents.) Your grid produces nice easy integers. However, not all grids will. Just to be certain, make sure your results always return 2 decimal places. This will really help ALL the Lighthouse9000™ operators.
 */
 
+
+
+
+// function percentageReport(){
+//   let totalRocks = (allRocks().length / 100) * totalCells();
+//   let totalCurrents = (allCurrents().length / 100) * totalCells();
+//   return [parseFloat(totalRocks.toFixed(2)), parseFloat(totalCurrents.toFixed(2))];
+// }
+
+
+// function percentageReport(){
+//   let totalRocks = (allRocks().length / 100) * totalCells();
+//   let totalCurrents = (allCurrents().length / 100) * totalCells();
+//   return parseFloat((totalRocks).toFixed(2));
+// }
+// => returns 9
+
+// function percentageReport(){
+//   let numRocks = (allRocks().length / totalCells()) * 100;
+//   let numCurrents = (allCurrents().length / totalCells()) * 100;
+//   let totalRocks = Math.floor(numRocks * 100) / 100;
+//   let totalCurrents = Math.floor(numCurrents * 100) / 100;
+//   return [totalRocks, totalCurrents];
+// }
+
+ function percentageReport(){
+   let numRocks = (allRocks().length / totalCells()) * 100;
+   let numCurrents = (allCurrents().length / totalCells()) * 100;
+   return [Math.round(numRocks * 100) / 100, Math.round(numCurrents * 100) / 100]
+ }
+
+// function percentageReport(){
+//   let numRocks = (allRocks().length / totalCells()) * 100;
+//   let numCurrents = (allCurrents().length / totalCells()) * 100;
+//   return Math.round( numRocks * 100)/100;
+// }
+
+function percentageReport(){
+    let totalRocks = (allRocks().length / 100) * totalCells();
+    let totalCurrents = (allCurrents().length / 100) * totalCells();
+    return [totalRocks.toPrecision(2), totalCurrents.toPrecision(2)];
+}
 
 /*
 Challenge #20
