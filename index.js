@@ -503,88 +503,10 @@ function howDangerous(str){
 //howDangerous('C5');
 // if the cell does not have a rock or a current, it will return 0
 
-
 function percentageReport(){
-  let totalRocks = (allRocks().length / 100) * totalCells();
-  let totalCurrents = (allCurrents().length / 100) * totalCells();
-  return [parseFloat(totalRocks.toFixed(2)), parseFloat(totalCurrents.toFixed(2))];
-}
-
-//(2) [9, 7]
-
-
-function percentageReport(){
-  let totalRocks = (allRocks().length / 100) * totalCells();
-  let totalCurrents = (allCurrents().length / 100) * totalCells();
+  let totalRocks = (allRocks().length / totalCells()) * 100;
+  let totalCurrents = (allCurrents().length / totalCells()) * 100;
   return [totalRocks.toFixed(2), totalCurrents.toFixed(2)];
 }
 
 //(2) ["9.00", "7.00"]
-
-
-// function percentageReport(){
-//   let totalRocks = (allRocks().length / 100) * totalCells();
-//   let totalCurrents = (allCurrents().length / 100) * totalCells();
-//   return [parseFloat((totalRocks).toFixed(2));
-// }
-//=> returns 9
-
-// function percentageReport(){
-//   let numRocks = (allRocks().length / totalCells()) * 100;
-//   let numCurrents = (allCurrents().length / totalCells()) * 100;
-//   let totalRocks = Math.floor(numRocks * 100) / 100;
-//   let totalCurrents = Math.floor(numCurrents * 100) / 100;
-//   return [totalRocks, totalCurrents];
-// }
-
-// (2) [9, 7]
-
-// function percentageReport(){
-//   let numRocks = (allRocks().length / totalCells()) * 100;
-//   let numCurrents = (allCurrents().length / totalCells()) * 100;
-//   return [Math.round(numRocks * 100) / 100, Math.round(numCurrents * 100) / 100]
-// }
-
-// (2) [9, 7];
-
-// function percentageReport(){
-//   let numRocks = (allRocks().length / totalCells()) * 100;
-//   let numCurrents = (allCurrents().length / totalCells()) * 100;
-//   return Math.round( numRocks * 100)/100;
-// }
-
-// returns 9
-
-// function percentageReport(){
-//   let numRocks = (allRocks().length / totalCells());
-//   let numCurrents = (allCurrents().length / totalCells());
-//   return [(Math.round(numRocks * 100) / 100), (Math.round(numCurrents * 100) / 100)]
-// }
-// //(2) [0.09, 0.07]
-
-// function percentageReport(){
-//   let numRocks = (allRocks().length / totalCells()) * 100;
-//   let numCurrents = (allCurrents().length / totalCells()) * 100;
-//   return [(Math.round(numRocks)), (Math.round(numCurrents))]
-// }
-// // //(2) [0.09, 0.07]
-
-
-// function percentageReport(){
-// 	let numRocks = (allRocks().length / totalCells()) * 100; // 9
-// 	let numCurrents = (allCurrents().length / totalCells()) * 100; // 7
-// 	return [Math.round(numRocks * 100) / 100, Math.round(numCurrents * 100) / 100]
-// }
-//(2) [9, 7]
-
-function percentageReport(){
-  let numRocks = (allRocks().length / totalCells()) * 100;
-  let numCurrents = (allCurrents().length / totalCells()) * 100;
-  return [(Math.round(numRocks.toFixed(2) * 100)/100), (Math.round(numCurrents.toFixed(2) * 100)/100)]
-}
-
-percentageReport();
-
-
-
-(2) [9, 7]

@@ -421,6 +421,7 @@ Lighthouse HQ also wants a report of the safety of your GRID. Write another func
 */
 
 
+
 /*
 Challenge #21
 Ship captains have heard of your prowess and want to know the length of their routes through your grid.
