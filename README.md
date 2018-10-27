@@ -6,7 +6,10 @@ Name: Women in Web Dev FB Group
 Description: The most active online community for female developers
 Member Count: 130
 
-Challenge prompts can be seen in `README` and my solutions seen in `solutions.js`
+## Instructions
+* Challenge prompts can be seen in `README` with hints from each day.
+*  `solutions.js` has all the solutions with minimal notes 
+*  `draft.js` has all previous versions of my code
 
 ## Show Grid
 
