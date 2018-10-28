@@ -229,8 +229,7 @@ Lighthouse HQ also wants a report of the safety of your GRID. Write another func
 ### Challenge #21
 Ship captains have heard of your prowess and want to know the length of their routes through your grid.
 
-Write a function called `calcDistance()` which will take two coordinates in the form of `'A3'` and calculate the distance between the two points.
+Write a function called `calcDistance()` which will take two coordinates in the form of `'A3'` and calculate the distance between the two points. Example: calcDistance('A1','Z6') should return "25.50"
 
 > #### Hint
 > You can find the formula for calculating the distance between two points. [Distance formula](https://www.calculatorsoup.com/calculators/geometry-plane/distance-two-points.php)
-> calcDistance('A1','Z6') should return "25.50"
