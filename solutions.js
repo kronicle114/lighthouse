@@ -290,3 +290,21 @@ function safetyReport(){
  length: 10
  
 */
+
+function calcDistance(coordinate1, coordinate2){
+  let x2 = convertColumn(coordinate2);
+  let x1 = convertColumn(coordinate1);
+  let y2 = convertRow(coordinate2);
+  let y1 = convertRow(coordinate1);
+
+  let d1 = Math.pow((x2 - x1),2);
+  let d2 = Math.pow((y2 - y1), 2);
+
+  return Math.sqrt(d1 + d2).toFixed(2);
+  
+}
+
+//calcDistance('A1','Z6');
+
+//25.495097567963924 (without .toFixed(2))
+//"25.50" w/ .toFixed(2)
