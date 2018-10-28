@@ -233,3 +233,4 @@ Write a function called `calcDistance()` which will take two coordinates in the 
 
 > #### Hint
 > You can find the formula for calculating the distance between two points. [Distance formula](https://www.calculatorsoup.com/calculators/geometry-plane/distance-two-points.php)
+> calcDistance('A1','Z6') should return "25.50"
